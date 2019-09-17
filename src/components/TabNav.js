@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Tab, Menu, Icon, Segment } from "semantic-ui-react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 import CharacterList from "./CharacterList";
@@ -15,12 +15,21 @@ import LocationList from  "./LocationList";
 // https://react.semantic-ui.com/elements/button/
 // https://react.semantic-ui.com/collections/breadcrumb/
 
+function Link(props) {
+        const handleItemClick = e => {
+          e.preventDefault();
+          props.history.push(props.to);
+        };
 
-export default function TabNav() {
+}
+
+export default function TabNav(props) {
 
     const [activeItem, setActiveItem] = useState('Home Page');
 
     const handleItemClick = (e, { name }) => setActiveItem({ activeItem: name });
+
+   
 
     return(
         <div>

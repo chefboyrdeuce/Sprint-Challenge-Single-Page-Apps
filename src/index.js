@@ -10,7 +10,7 @@ import EpisodeList from "./components/EpisodeList";
 
 ReactDOM.render(
   <Router>
-    
+
     <App />
     <CharacterList />
     <LocationList />
