@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Tab, Menu, Icon, Segment } from "semantic-ui-react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+
+import CharacterList from "./CharacterList";
+import LocationList from  "./LocationList";
+
 
 // TODO: Add missing menu/tabs/nav below
 
@@ -19,13 +24,14 @@ export default function TabNav() {
 
     return(
         <div>
-            <Menu tabular>
-            <Menu.Item name='Home Page' active={activeItem === 'Home Page'} as={NavLink} exact to="/" onClick={handleItemClick}> <Icon name='home' size='mini' />Home Page</Menu.Item> 
-            <Menu.Item name='Characters' active={activeItem === 'Characters'} as={NavLink} exact to="/characters" onClick={handleItemClick}> <Icon name='users' size='mini' />Characters</Menu.Item> 
-            <Menu.Item name='Locations' active={activeItem === 'Locations'} as={NavLink} exact to="/locations" onClick={handleItemClick}> <Icon name='map' size='mini' />Locations</Menu.Item> 
-            <Menu.Item name='Episodes' active={activeItem === 'Episodes'} as={NavLink} exact to="/episodes" onClick={handleItemClick}> <Icon name='film' size='mini' />Episodes</Menu.Item> 
-            </Menu>
-
+            <nav>
+                <Menu tabular>
+                <Menu.Item name='Home Page' active={activeItem === 'Home Page'} as={NavLink} exact to="/" onClick={handleItemClick}> <Icon name='home' size='mini' />Home Page</Menu.Item> 
+                <Menu.Item name='Characters' active={activeItem === 'Characters'} as={NavLink} exact to="/CharacterList" onClick={handleItemClick}> <Icon name='users' size='mini' />Characters</Menu.Item> 
+                <Menu.Item name='Locations' active={activeItem === 'Locations'} as={NavLink} exact to="/LocationList" onClick={handleItemClick}> <Icon name='map' size='mini' />Locations</Menu.Item> 
+                <Menu.Item name='Episodes' active={activeItem === 'Episodes'} as={NavLink} exact to="/EpisodeList" onClick={handleItemClick}> <Icon name='film' size='mini' />Episodes</Menu.Item> 
+                </Menu>
+            </nav>
         </div>  
     )
 };

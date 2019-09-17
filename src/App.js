@@ -4,6 +4,8 @@ import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList.js";
 import EpisodeList from "./components/EpisodeList.js";
 import WelcomePage from "./components/WelcomePage.js";
+import LocationList from "./components/LocationList.js";
+
 
 
 export default function App() {
