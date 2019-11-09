@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 import CharacterList from "./CharacterList";
 import LocationList from  "./LocationList";
 
-
 // TODO: Add missing menu/tabs/nav below
 
 // Review Semantic UI Component options for nav-like UI:
